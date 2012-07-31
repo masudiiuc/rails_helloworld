@@ -4,9 +4,19 @@
     <th>User Name</th>
     <th>User Email</th>
   </tr>
-  <tr>
-    <td><%= @user.name %></td>
-    <td><%= @user.email %></td>
-  </tr>
+
+  <% if @users %>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+      </tr>
+      <% end %>
+  <% else %>
+      <tr>
+         <td colspan="2"><center>No user available</center></td>
+      </tr>
+  <% end %>
+
 </table>
 

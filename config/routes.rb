@@ -7,7 +7,7 @@ Helloworld::Application.routes.draw do
   match '/contact', :to => 'welcome#contact'
   match '/login',   :to => 'users#login'
   match '/signup',  :to => 'users#signup'
-  match '/users',   :to => 'users#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
